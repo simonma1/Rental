@@ -1,0 +1,129 @@
+body{
+	color:#000305;
+	font-family: Arial, Lucida Sans Unicode;
+	line-height:1.5;
+	width: 100%;
+	background-image:url("background.jpg");
+
+}
+
+.head nav ul li{
+	display: inline;
+}
+
+.head nav a {
+	padding-left: 30px;
+	color: white;
+}
+
+.head  a{
+	color : black;
+	text-decoration:none;
+}
+
+
+.head img{
+	height : auto;
+	width: 100%;
+
+}
+#signup a{
+	
+	color: blue;
+
+}
+
+header{
+	margin:0.5% 1% 2% 8%;
+	float:left;
+	width:50%;
+}
+
+.nav {
+	background-color:#A0A0A0;
+	border-radius:5px;
+	color:white;
+	font-size:30px;
+
+}
+footer{
+	line-height:0.5;
+	clear:both;
+	margin: 0 0 0 8%;
+}
+
+footer a {
+	text-decoration:none;
+	color:#000305;
+	font-weight:bold;
+}
+
+.login {
+	width: 30%;
+	float: left;
+	margin:2.5% 0;
+	background-color:#A0A0A0;
+	padding:8px;
+	border-radius:5px;
+	height:50px;
+	color:#000305;
+
+}
+
+.pss{
+	padding-right:10px;
+}
+
+.main {
+	clear:both;
+	margin:0.5% 1% 2% 8%;
+	width:75%;
+	color : white;
+	background-color:#A0A0A0;
+	padding:8px;
+	border-radius:5px;
+}
+
+.mainregistration {
+	clear:both;
+	margin:0.5% 1% 2% 8%;
+	width:75%;
+	color : white;
+	background-color:#A0A0A0;
+	padding:8px;
+	border-radius:5px;
+}
+
+#submit {
+	border-radius:2px;
+	margin-left:2%;
+}
+
+#but {
+	margin-left:60px;
+}
+
+.tblisting {
+	border-style:solid;
+}
+
+table img{
+	width:75%;
+	margin-left:25%;
+	height:250px;
+
+}
+
+.username {
+	color:white;
+	padding-left: 10%;
+	font-size:20px;
+	float:left;
+}
+
+.logofForm{
+	float:left;
+	padding-top:20px;
+	padding-left: 10px;
+
+}

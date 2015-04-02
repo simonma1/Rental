@@ -1,0 +1,132 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Rental Matching Market</title>
+	<meta charset="utf-8"/>
+	
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<script type="text/javascript" src="tenant.js"></script>
+</head>
+
+<body>
+
+	<?php
+	//Owners will not be able to access the tenant part of the website
+		if(isset($_SESSION["role"])){
+			$role="owner";
+			if($_SESSION["role"]==$role){
+				header('Location: owner.php');
+			}
+			
+		}
+	
+	?>
+	
+	<header class="head">
+		
+		
+		
+		<nav class="nav">
+			<ul> 
+				<li><a href="index.php"> Home</a></li>
+				<li><a href="owner.php">Owner</a></li>
+				<li><a href="tenant.php">Tenant</a></li>
+				<li><a href="properties.php">Properties</a></li>
+			</ul>
+		</nav>	
+
+		<img src="Montreal.jpg" alt="Picture of Montreal">
+	
+	</header>
+	<aside class="login">
+		<?php
+		if(!isset($_SESSION["loggedin"])){
+			$_SESSION["loggedin"] = false;
+		}
+		 
+		
+			if($_SESSION["loggedin"]){
+			echo '<p class="username">Welcome '. $_SESSION["user_name"] . '!</p>
+			<form class="logofForm" action="logoff.php" method="POST">
+				<input type="submit" id="submit" name="logoff" value="Log off">
+				</form>';
+			}else{
+				echo '<form class="myForm" action="login.php" method="POST">
+		User Name: 
+		<input type="text" name="usr" placeholder="name"></br>
+		<span class="pss">Password:</span>
+		<input type="password" name="pswd" placeholder="password">
+		<input type="submit" id="submit" name="login" value="Login">
+		<span id="signup"><a href="registration.html"> sign up</a></span>
+		</form>';
+			}
+		?>
+	</aside>
+	
+	<div class="main" id="main">
+		<div id="tenantProfil">
+		
+		<p>Tenants have the opportunity to see houses for sell  </p>
+		
+		<p>To set-up your account please enter the following information</p>
+		
+		<form class="formProfil" action="">
+			Do you have a pet?:</br>
+			<input type="radio" name="pet" value="yes" >Yes<br>
+			<input type="radio" name="pet" value="no" checked>NO<br></br>
+			
+			Smoking?</br>
+			<input type="radio" name="smoke" value="yes" >Yes<br>
+			<input type="radio" name="smoke" value="no" checked>NO<br></br>
+			
+			Age: 
+			<input type="text" name="age" placeholder="Your Age"></br></br>
+			
+			Occupation:
+			<input type="text" name="job" placeholder="Your Job"></br></br>
+			
+			Level of income:
+			<input type="text" name="money" placeholder="Your Salary"></br></br>
+			
+			<button>Save</button>
+			
+		</form>
+			
+		
+		<p>You also have the opportunity to select your preferred characteristic of the owner by filling the following form</p>
+		
+		<form class="formPreference" action="">
+			
+			Location: 
+			<input type="text" name="loc" placeholder="Your Age"></br></br>
+			
+			Price:
+			<input type="text" name="pr" placeholder="Your Job"></br></br>
+			
+			Personal Message:
+			<textarea name="msg" rows="10" cols="20" placeholder="Your Message">
+			</textarea></br></br>
+			
+			<button>Save</button>
+			
+		</form>
+			
+			
+		
+		<!--<button onclick="preferenceForm()">Update</button>-->
+	
+		</div>
+	
+	</div>
+	
+	<footer>
+		<p>Copyright &copy: Simon Monière Abes</p>
+		<p><a href="mailto:simon.moniereabes@gmail.com">Contact</a></p>
+	</footer>
+</body>
+
+
+</html>

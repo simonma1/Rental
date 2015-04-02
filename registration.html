@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Rental Matching Market</title>
+	<meta charset="utf-8"/>
+	
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<script type="text/javascript" src="FormConfirmation.js"></script>
+</head>
+
+<body>
+	
+	<header class="head">
+		
+		
+		
+		<nav class="nav">
+			<ul> 
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="owner.html">Owner</a></li>
+				<li><a href="tenant.html">Tenant</a></li>
+				<li><a href="properties.html">Properties</a></li>
+			</ul>
+		</nav>	
+
+		<img src="Montreal.jpg" alt="Picture of Montreal">
+	
+	</header>
+	<aside class="login">
+		<form class="myForm">
+		User Name: 
+		<input type="text" name="usr" placeholder="name"></br>
+		<span class="pss">Password:</span>
+		<input type="password" name="pswd" placeholder="password">
+		<input id="submit" type="button" value="Login">
+		<span id="signup"><a href="registration.html"> sign up</a></span>
+		</form>
+	</aside>
+	
+	<div class="mainregistration">
+		<p>To register please complete the following form  </p>
+		
+		<form class="regform" action="signup.php" method="post">
+		
+			First Name: 
+			<input type="text" name="name" placeholder="Your first name" onblur="chkFirstName()" required ></br></br>
+			Last Name:
+			<input type="text" name="lastName" placeholder="Your last name" onblur="chkLastName()" required></br></br>
+			Register As: <br>
+			<div id="but">
+				<input type="radio" name="role" value="owner" checked>Owner<br>
+				<input type="radio" name="role" value="tenant">Tenant<br></br>
+			</div>
+			Phone Number: 
+			<input type="text" name="phonenum" placeholder="(XXX)XXX-XXXX" onblur="chkPhone()" required></br></br>
+			Email Address: 
+			<input type="text" name="email" placeholder="your@email.com" onblur="chkEmail()" required></br></br>
+			User Name:
+			<input type="text" name="usrName" placeholder="usrName" onBlur="chkUsr()" required>
+				<span> At least 6 characters</span></br></br>
+			Password:
+				<input type="password" name="password" id="initial" placeholder="password" onBlur="chkPswd()" required></br></br>
+			Confirm Password:
+			<input type="password" id="second" placeholder="password" onBlur="confirmPswd()" required></br></br>
+			
+			<input type="submit" name="submit" value="send" onsubmit="chkAll()">	
+			<input type="reset">
+ 		
+		</form>
+		
+	
+	</div>
+	
+	<footer>
+		<p>Copyright &copy: Simon Monière Abes</p>
+		<p><a href="mailto:simon.moniereabes@gmail.com">Contact</a></p>
+	</footer>
+</body>
+
+
+</html>
